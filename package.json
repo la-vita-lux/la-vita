@@ -2,7 +2,7 @@
   "name": "la-vita-repo",
   "private": true,
   "scripts": {
-    "build": "cd source && npm ci --no-audit --no-fund && npm run build:publish",
+    "build": "cd source && npm ci --no-audit --no-fund && npm run build",
     "dev": "cd source && npm run dev",
     "preview": "cd source && npm run preview"
   },
