@@ -1,6 +1,6 @@
 "use client"
 import React from "react"
-import { useLocation, useNavigate } from "react-router-dom"
+import { useLocation, useNavigate, Link } from "react-router-dom"
 import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
@@ -38,24 +38,21 @@ export default function Navigation({ transparent = false }: NavigationProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-2">
-            <a href="/#home" className="text-xl hover:text-amber-500 transition-colors" style={{ color: "#561616" }}>
+            <Link to="/#home" className="text-xl hover:text-amber-500 transition-colors" style={{ color: "#561616" }}>
               LA VITA
-            </a>
+            </Link>
           </div>
           {/* Desktop nav */}
           <div className="hidden md:flex items-center space-x-8">
-            <a onClick={(e) => { e.preventDefault(); handleHomeHashNavigate('#home') }} href="/#home" className="hover:text-amber-500 transition-colors" style={{ color: "#561616" }}>
+            <Link to="/#home" className="hover:text-amber-500 transition-colors" style={{ color: "#561616" }}>
               Home
-            </a>
-            <a onClick={(e) => { e.preventDefault(); handleHomeHashNavigate('#building') }} href="/#building" className="hover:text-amber-500 transition-colors" style={{ color: "#561616" }}>
-              Building
-            </a>
-            <a onClick={(e) => { e.preventDefault(); handleHomeHashNavigate('#residences') }} href="/#residences" className="hover:text-amber-500 transition-colors" style={{ color: "#561616" }}>
+            </Link>
+            <Link to="/#residences" className="hover:text-amber-500 transition-colors" style={{ color: "#561616" }}>
               Residences
-            </a>
-            <a onClick={(e) => { e.preventDefault(); handleHomeHashNavigate('#lifestyle') }} href="/#lifestyle" className="hover:text-amber-500 transition-colors" style={{ color: "#561616" }}>
+            </Link>
+            <Link to="/#lifestyle" className="hover:text-amber-500 transition-colors" style={{ color: "#561616" }}>
               Lifestyle
-            </a>
+            </Link>
             <div
               onMouseEnter={() => setOpen(true)}
               onMouseLeave={() => {
@@ -86,9 +83,9 @@ export default function Navigation({ transparent = false }: NavigationProps) {
                   onMouseEnter={() => setOpen(true)}
                 >
                   <DropdownMenuItem asChild className="hover:bg-[#faece2] focus:bg-[#faece2] text-black hover:text-black focus:text-black">
-                    <a href="/3d-view" className="w-full text-black">
+                    <Link to="/3d-view" className="w-full text-black">
                       3D Views
-                    </a>
+                    </Link>
                   </DropdownMenuItem>
                   {/* <DropdownMenuItem asChild className="hover:bg-[#faece2] focus:bg-[#faece2] text-black hover:text-black focus:text-black">
                     <a href="/inside-lights" className="w-full text-black">
@@ -98,9 +95,9 @@ export default function Navigation({ transparent = false }: NavigationProps) {
                 </DropdownMenuContent>
               </DropdownMenu>
             </div>
-            <a onClick={(e) => { e.preventDefault(); handleHomeHashNavigate('#contact') }} href="/#contact" className="hover:text-amber-500 transition-colors" style={{ color: "#561616" }}>
+            <Link to="/#contact" className="hover:text-amber-500 transition-colors" style={{ color: "#561616" }}>
               Contact
-            </a>
+            </Link>
           </div>
 
           {/* Mobile hamburger */}
@@ -133,30 +130,27 @@ export default function Navigation({ transparent = false }: NavigationProps) {
       {mobileOpen && (
         <div className={`${transparent ? 'bg-background/95' : 'bg-background/95'} border-b border-border md:hidden fixed top-16 left-0 right-0 z-40`}> 
           <div className="px-4 py-3 space-y-2">
-            <a onClick={(e) => { e.preventDefault(); handleHomeHashNavigate('#home') }} href="/#home" className="block py-2 text-base hover:text-amber-500" style={{ color: "#561616" }}>
+            <Link to="/#home" className="block py-2 text-base hover:text-amber-500" style={{ color: "#561616" }}>
               Home
-            </a>
-            <a onClick={(e) => { e.preventDefault(); handleHomeHashNavigate('#building') }} href="/#building" className="block py-2 text-base hover:text-amber-500" style={{ color: "#561616" }}>
-              Building
-            </a>
-            <a onClick={(e) => { e.preventDefault(); handleHomeHashNavigate('#residences') }} href="/#residences" className="block py-2 text-base hover:text-amber-500" style={{ color: "#561616" }}>
+            </Link>
+            <Link to="/#residences" className="block py-2 text-base hover:text-amber-500" style={{ color: "#561616" }}>
               Residences
-            </a>
-            <a onClick={(e) => { e.preventDefault(); handleHomeHashNavigate('#lifestyle') }} href="/#lifestyle" className="block py-2 text-base hover:text-amber-500" style={{ color: "#561616" }}>
+            </Link>
+            <Link to="/#lifestyle" className="block py-2 text-base hover:text-amber-500" style={{ color: "#561616" }}>
               Lifestyle
-            </a>
+            </Link>
             <div className="pt-2">
               <div className="text-sm uppercase tracking-wide mb-1" style={{ color: '#561616' }}>Explore</div>
-              <a href="/3d-view" className="block py-2 pl-3 text-base hover:text-amber-500" style={{ color: "#561616" }}>
+              <Link to="/3d-view" className="block py-2 pl-3 text-base hover:text-amber-500" style={{ color: "#561616" }}>
                 3D Views
-              </a>
+              </Link>
               {/* <a href="/inside-lights" className="block py-2 pl-3 text-base hover:text-amber-500" style={{ color: "#561616" }}>
                 单元户型图
               </a> */}
             </div>
-            <a onClick={(e) => { e.preventDefault(); handleHomeHashNavigate('#contact') }} href="/#contact" className="block py-2 text-base hover:text-amber-500" style={{ color: "#561616" }}>
+            <Link to="/#contact" className="block py-2 text-base hover:text-amber-500" style={{ color: "#561616" }}>
               Contact
-            </a>
+            </Link>
           </div>
         </div>
       )}
