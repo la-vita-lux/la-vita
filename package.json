@@ -1,0 +1,13 @@
+{
+  "name": "la-vita-repo",
+  "private": true,
+  "scripts": {
+    "build": "cd source && npm ci --no-audit --no-fund && npm run build:publish",
+    "dev": "cd source && npm run dev",
+    "preview": "cd source && npm run preview",
+    "deploy": "gh-pages -d dist -b main -r https://github.com/la-vita-lux/la-vita-lux.github.io.git"
+  },
+  "dependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
