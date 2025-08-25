@@ -29,22 +29,22 @@ export default function Description() {
               </div>
             </div>
 
-            {/* Overlapping image collage */}
-            <div className="relative md:w-[52%] w-full h-[32rem] sm:h-[40rem] md:h-[46rem] mt-2 md:mt-0 overflow-hidden">
+            {/* Image list: same size, no overlap */}
+            <div className="w-full md:w-[52%] mt-2 md:mt-0 flex flex-col gap-4">
               <img
                 src="/images/detail-3.png"
                 alt="Stone wall texture detail"
-                className="absolute top-0 left-0 w-[70%] sm:w-[64%] md:w-[56%] h-auto rounded-xl shadow-2xl object-contain"
+                className="w-full h-64 sm:h-72 md:h-80 rounded-xl shadow-xl object-cover"
               />
               <img
                 src="/images/detail-2.png"
                 alt="Marble reception detail"
-                className="absolute bottom-0 right-0 w-[56%] sm:w-[52%] md:w-[48%] h-auto rounded-xl shadow-xl object-contain"
+                className="w-full h-64 sm:h-72 md:h-80 rounded-xl shadow-xl object-cover"
               />
               <img
                 src="/images/detail-1.png"
                 alt="Lobby lighting sculpture"
-                className="absolute top-12 sm:top-16 md:top-24 left-[58%] -translate-x-1/2 w-[66%] sm:w-[60%] md:w-[54%] h-auto rounded-xl shadow-2xl rotate-1 object-contain"
+                className="w-full h-64 sm:h-72 md:h-80 rounded-xl shadow-xl object-cover"
               />
             </div>
           </div>

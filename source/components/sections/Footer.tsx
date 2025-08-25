@@ -28,7 +28,7 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-white">独家销售与营销</h3>
             <div className="bg-white p-4 rounded-lg inline-block">
-              <img src="/images/pro-links-logo.png" alt="PRO Links Realty" className="h-12 w-auto" />
+              <img src="/images/pro-links-logo-2.png" alt="PRO Links Realty" className="h-12 w-auto" />
             </div>
             <p className="text-slate-400 text-xs">Exclusive Sales and Marketing by PRO Links Realty</p>
           </div>
