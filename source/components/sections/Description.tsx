@@ -29,22 +29,22 @@ export default function Description() {
               </div>
             </div>
 
-            {/* Image list: same size, no overlap */}
-            <div className="w-full md:w-[52%] mt-2 md:mt-0 flex flex-col gap-4">
+            {/* Image grid: similar sizing as Lifestyle, no overflow, moderate height */}
+            <div className="w-full md:w-[52%] mt-2 md:mt-0 grid grid-cols-1 sm:grid-cols-2 gap-4">
               <img
                 src="/images/detail-3.png"
                 alt="Stone wall texture detail"
-                className="w-full h-64 sm:h-72 md:h-80 rounded-xl shadow-xl object-cover"
+                className="w-full h-56 sm:h-64 md:h-72 object-cover rounded-xl shadow-md"
               />
               <img
                 src="/images/detail-2.png"
                 alt="Marble reception detail"
-                className="w-full h-64 sm:h-72 md:h-80 rounded-xl shadow-xl object-cover"
+                className="w-full h-56 sm:h-64 md:h-72 object-cover rounded-xl shadow-md"
               />
               <img
                 src="/images/detail-1.png"
                 alt="Lobby lighting sculpture"
-                className="w-full h-64 sm:h-72 md:h-80 rounded-xl shadow-xl object-cover"
+                className="w-full h-56 sm:h-64 md:h-72 object-cover rounded-xl shadow-md"
               />
             </div>
           </div>
